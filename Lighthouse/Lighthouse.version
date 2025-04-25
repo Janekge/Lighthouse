@@ -1,0 +1,13 @@
+{
+    "masterVersionFile" : "https://github.com/Janekge/Lighthouse/blob/0b46dbf76bcb17f5643b508941c2e0bbad006b88/Lighthouse_1%2C0%2C0.zip",
+    "modName" : "Lighthouse",
+    "modThread" : none,
+    "modVersion" :
+    {
+        "major":1,
+        "minor":0,
+        "patch":0,
+    },
+    "starsectorVersion" : "0.98a-RC8",
+    # all this stuff is required for versionchecker integration
+}
