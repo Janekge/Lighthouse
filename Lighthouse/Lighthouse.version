@@ -1,6 +1,7 @@
 {
-    "masterVersionFile" : "https://github.com/Janekge/Lighthouse/blob/92176d7b01a5b79b6d4c90d4c851eb2762e0230c/Lighthouse/Lighthouse.version",
+    "masterVersionFile" : "https://github.com/Janekge/Lighthouse/blob/cf9db6a97f58a2dce113138f604b2c7db11c077f/Lighthouse/Lighthouse.version",
     "modName" : "Lighthouse",
+    #"directDownloadURL": "https://github.com/Janekge/Lighthouse/blob/cf9db6a97f58a2dce113138f604b2c7db11c077f/Lighthouse_1.0.0.zip"
     "modThread" : none,
     "modVersion" :
     {
