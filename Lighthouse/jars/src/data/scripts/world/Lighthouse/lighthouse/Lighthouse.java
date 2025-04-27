@@ -1,10 +1,7 @@
 package data.scripts.world.Lighthouse.lighthouse;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.PlanetAPI;
-import com.fs.starfarer.api.campaign.SectorAPI;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -62,13 +59,12 @@ public class Lighthouse {
         SectorEntityToken stableloc1 = system.addCustomEntity("lighthouse_stableloc_1", "Comm Relay", "comm_relay", Factions.NEUTRAL);
         stableloc1.setCircularOrbit(Lighthouse_star, 360f*(float)Math.random(),4500, 540);
 
-
         PlanetAPI Lighthouse_2 = system.addPlanet(
                 "lighthouse_2",
                 Lighthouse_star,
                 "Far Port",
                 "terran",
-                360f*(float)Math.random(),
+                270f,
                 200,
                 6000,
                 720
@@ -84,6 +80,11 @@ public class Lighthouse {
         lighthouse_2_market.setPrimaryEntity(Lighthouse_2);
         Lighthouse_2.setMarket(lighthouse_2_market);
         Lighthouse_2.setCustomDescriptionId("lighthouse_2");
+
+        JumpPointAPI jump_point_Lighthouse_2 = Global.getFactory().createJumpPoint("lighthouse_jump_point_1", "Far Port Approach");
+        jump_point_Lighthouse_2.setCircularOrbit(Lighthouse_star, 290f, 6000, 720);
+        jump_point_Lighthouse_2.setRelatedPlanet(Lighthouse_2);
+        system.addEntity(jump_point_Lighthouse_2);
 
         SectorEntityToken stableloc2 = system.addCustomEntity("lighthouse_stableloc_2", "Sensor Array", "sensor_array", Factions.NEUTRAL);
         stableloc2.setCircularOrbit(Lighthouse_star, 360f*(float)Math.random(),7500, 960);
@@ -134,10 +135,9 @@ public class Lighthouse {
         SectorEntityToken gate = system.addCustomEntity("lighthouse_gate", "Inactive Gate", "inactive_gate", Factions.NEUTRAL);
         gate.setCircularOrbit(Lighthouse_star, 360f*(float)Math.random(),13500, 2500);
 
-        cleanup(system);
-
-
         system.autogenerateHyperspaceJumpPoints(true,true);
+
+        cleanup(system);
 
 
     }
@@ -147,7 +147,7 @@ public class Lighthouse {
         float minRadius = plugin.getTileSize() * 2f;
 
         float radius = system.getMaxRadiusInHyperspace();
-        editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius+minRadius * 0.5f, 0, 360f);
+        editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius+minRadius * 0.5f , 0, 360f);
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius+minRadius , 0, 360f, 0.25f);
 
     }

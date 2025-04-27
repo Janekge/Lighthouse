@@ -2,11 +2,11 @@
     "masterVersionFile" : "https://raw.githubusercontent.com/Janekge/Lighthouse/main/Lighthouse/Lighthouse.version",
     "modName" : "Lighthouse",
     #"directDownloadURL": "https://github.com/Janekge/Lighthouse/blob/cf9db6a97f58a2dce113138f604b2c7db11c077f/Lighthouse_1.0.0.zip"
-    "modThread" : none,
+    "modThread" : "32805",
     "modVersion" :
     {
         "major":1,
-        "minor":0,
+        "minor":1,
         "patch":0,
     },
     "starsectorVersion" : "0.98a-RC8",
