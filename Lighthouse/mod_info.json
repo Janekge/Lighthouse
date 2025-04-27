@@ -1,6 +1,6 @@
 {
-  "id": "LGHT_dev", # internal id
-  "name" : "Lighthouse_dev", # displayed to the player
+  "id": "LGHT", # internal id
+  "name" : "Lighthouse", # displayed to the player
   "version" : "1.1.0", # mod version
   "description" : "Adds a system at the edge of the Abyss, a light in the dark.", # a nice read
   "author" : "Janekge", # who made this
